@@ -1,0 +1,1 @@
+web: gunicorn pysantosh.wsgi --log-file -
