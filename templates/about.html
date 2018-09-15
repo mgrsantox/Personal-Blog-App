@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!---<link href="{% static 'vendor/resume.min.css' %}" rel="stylesheet">
+-->    <div class="container">
+      <section class="alert alert-success" id="about">
+            <div class="mr-4">
+                <img style="width: 30%;
+                height: auto;border-radius: 50%;" src="{% static 'vendor/prof.jpg' %}" alt="profile" width="400" height="200">
+              <h1 class="mb-0">Santosh
+                <span class="text-primary">Rana</span>
+              </h1>
+              <div class="subheading mb-5">Thankot, Kathmandu <br> +977 9861 8888 18
+                <br>
+                <a href="mailto:pydev.santos@gmail.com">pydev.santos@gmail.com</a>
+              </div>
+              <p class="lead mb-5">Python Developer</p>
+            </div>
+          </section>
+    
+          <hr class="m-0">
+    
+          <section class="alert alert-info" id="experience">
+            <div class="my-auto">
+              <h2 class="mb-5">Skills</h2>
+    
+              <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                <div class="resume-content mr-auto">
+                  <h3 class="mb-0">Web Developer</h3>
+                  <div class="subheading mb-3">Python Django</div>
+                  <p>It is such great to working on Django Framework. Django is Advance python web development framework. <br>
+                I have been learning Django since 2016.
+                </p>
+                </div>
+              </div>
+    
+              <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                <div class="resume-content mr-auto">
+                  <h3 class="mb-0">Data Science</h3>
+                  <div class="subheading mb-3">Python Pandas, Numpy</div>
+                  <p>I love Pyhton programming. There is another programming language for Data science. Python have lots of libraries for data science. <br>
+                </p>
+                </div>
+              </div>
+    
+              <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                <div class="resume-content mr-auto">
+                  <h3 class="mb-0">Linux</h3>
+                  <div class="subheading mb-3">Debian base linux</div>
+                  <p>Since I started Bsc.CSIT my laptop primary operating system is Linux. I love open source software. <br>
+                There is so many problems on using linux system than Windows and Macintos. But ubuntu became my best friend.
+                </p>
+                </div>
+              </div>
+            </div>
+    
+          </section>
+    
+          <hr class="m-0">
+    
+          <section class="alert alert-warning" id="education">
+            <div class="my-auto">
+              <h2 class="mb-5">Education</h2>
+    
+              <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                <div class="resume-content mr-auto">
+                  <h2 class="mb-0">Tribhuvan University</h2>
+                  <div class="subheading mb-3">Bachelor of Science</div>
+                  <div>Computer Science and Information Technology</div>
+                  <h4>Henry Ford international College</h4>
+                </div>
+                <div class="resume-date text-md-right">
+                  <span class="text-primary">Aug 2015 - Present</span>
+                </div>
+              </div>
+    
+              <div class="resume-item d-flex flex-column flex-md-row">
+                <div class="resume-content mr-auto">
+                  <h2 class="mb-0">Pinnacle Academy</h2>
+                  <div class="subheading mb-3">Science</div>
+                </div>
+                <div class="resume-date text-md-right">
+                  <span class="text-primary">May 2012 - May 2015</span>
+                </div>
+              </div>
+    
+            </div>
+          </section>
+{% endblock content %}

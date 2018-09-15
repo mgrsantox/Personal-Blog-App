@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  | Home
+{% endblock title %}
+
+{% block content %}
+<style> 
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        </style>
+<div class="container">
+        <img src="{% static 'vendor/index.jpg' %}" alt="img" style="width:100%;">
+        <div class="centered"><h1><span class="badge badge-warning">Welcome To My Website</span></h1>
+            <h1><span class="badge badge-info">"There's no meaning to a flower unless it blooms."</span></h1>
+        </div><br><br><br><br><hr>
+        <h1 style="color:rgb(59, 231, 88);">Popular Blogs</h1><hr>
+{% for post in cast %}
+
+<h2>
+    <a href="{{ post.get_absolute_url }}">{{ post.title|safe }}</a>
+</h2>
+
+<p>
+    Published {{post.publish}} by {{post.author}}
+</p>
+{{post.body|safe|truncatewords:30|linebreaks}}
+<br><hr>
+
+{% endfor %}</div>
+{% endblock content %}

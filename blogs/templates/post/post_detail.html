@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">{{post.title}}</h1>
+    <p class="lead">
+            by
+            <a href="#">{{post.author}}</a>
+     </p>
+    <p>{{post.publish}}</p>
+    {{ post.body | safe }}
+
+        <hr>
+            {% with comments.count as total_comments %}
+            <h3>
+                {{ total_comments }} comment{{ total_comments|pluralize }}
+            </h3>
+            {% endwith %}
+         <br>
+
+
+         <h5 class="amt-0">Comments</h5>
+                      {% for comment in comments %}
+                             By {{ comment.name }}
+                     {{ comment.body|linebreaks }}
+                     {% empty %}
+                    <p>There are no Comments yet. <br> Be the first....</p>
+                    {% endfor %}
+
+
+                    {% if new_comment %}
+                {% else %}
+                <h5 class="card-header">Leave a Comment:</h5>
+                    <div class="card-body">
+                      <form action="." method="POST">{% csrf_token %}
+                         <div class="form-group">
+                              {{comment_form.as_p}}
+                            <br>
+                         </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                         </form>
+                            {% endif %}</div></div>
+
+</div>
+
+
+{% endblock content %}
