@@ -1,5 +1,5 @@
 astroid==2.0.4
-Django== 2.2.18
+Django== 2.2.24
 django-ckeditor==5.6.1
 django-js-asset==1.1.0
 isort==4.3.4
